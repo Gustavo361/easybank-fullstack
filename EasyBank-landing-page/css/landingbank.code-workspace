@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../easy-bank-server"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "EasyBank-landing-page"
+	}
+}

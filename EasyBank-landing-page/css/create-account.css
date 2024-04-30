@@ -1,0 +1,99 @@
+@import url(themes.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F5F7;
+}
+
+h1 {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 4%;
+    color: var(--color-dark-blue);
+}
+
+p {
+    width: 90%;
+    display: block;
+    text-align: center;
+    color: var(--color-dark-blue);
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+form {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+form label {
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    color: var(--color-dark-blue);
+}
+
+form label:first-child {
+    margin-top: initial;
+}
+
+form input {
+    border: 3px solid transparent;
+    border-radius: 22px;
+    padding: 3.4%;
+    background:
+        linear-gradient(#F4F5F7, #F4F5F7) padding-box,
+        linear-gradient(to left, hsl(192, 70%, 51%), hsl(136, 65%, 51%)) border-box;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form span {
+    display: none;
+    color: #FE9448;
+}
+
+form span.active {
+    display: initial;
+}
+
+form button {
+    margin-top: 2%;
+    margin-bottom: 1.6%;
+    width: 100%;
+    padding: 4%;
+    border: none;
+    border-radius: 22px;
+    background: linear-gradient(to right, var(--color-lime-green), var(--color-bright-cyan));
+    font-weight: var(--weight-bold);
+    color: white;
+    cursor: pointer;
+}
+
+div span {
+    margin-bottom: 7%;
+    display: block;
+    text-align: center;
+    color: var(--color-dark-blue);
+}
+
+div span a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+div span a:hover {
+    color: #3498db
+}

@@ -1,0 +1,401 @@
+@import url(./themes.css);
+
+:root {
+    --color-dark-blue: hsl(233, 26%, 24%);
+    --color-lime-green: hsl(136, 65%, 51%);
+    --color-bright-cyan: hsl(192, 70%, 51%);
+
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-family: 'Public Sans', sans-serif;
+    --weight-light: 300;
+    --weight-normal: 400;
+    --weight-bold: 700;
+
+    --font-size: 18px;
+
+    --gradient: linear-gradient(to right, var(--color-lime-green), var(--color-bright-cyan));
+    width: 100%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: var(--font-family);
+}
+
+body {
+    overflow-x: hidden;
+    font-size: (var(--font-size));
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    background-color: var(--white);
+}
+
+nav {
+    background-color: inherit;
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+nav button {
+    display: none;
+}
+
+nav [data-menu-container] {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+    padding-top: 5%;
+    width: 100%;
+    height: 90vh;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3;
+}
+
+nav [data-menu-container].active {
+    display: flex;
+}
+
+nav [data-menu-container] ul {
+    background-color: white;
+    width: 90%;
+    height: fit-content;
+    border-radius: 8px;
+    padding: 4.5% 0% 4.5% 0%;
+}
+
+nav [data-menu-container] ul li {
+    list-style: none;
+    text-align: center;
+    padding-top: 4.5%;
+    padding-bottom: 4.5%;
+    cursor: pointer;
+    color: var(--grayish-blue);
+}
+
+nav [data-menu-container] ul li a {
+    color: hsl(233, 8%, 62%);
+}
+
+nav #menu button {
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+nav #menu button img#icon-hamburger {
+    width: 28px;
+    height: 18px;
+}
+
+nav #menu button img#icon-close {
+    width: 20px;
+    height: 20px;
+}
+
+nav #menu button.active {
+    display: initial;
+}
+
+header section#hero {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    padding-bottom: 28%;
+}
+
+header section#hero div#hero-image {
+    background-image: url(../images/mobile/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 54%;
+}
+
+header section#hero div#hero-image img {
+    width: 100%;
+    margin-top: -36%;
+}
+
+header section#hero div#hero-content {
+    padding-top: 10%;
+    padding-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    text-align: center;
+}
+
+header section#hero div#hero-content h1 {
+    font-size: clamp(32px, 4vw, 70px);
+    font-weight: var(--weight-light);
+    color: var(--color-dark-blue);
+}
+
+header section#hero div#hero-content p {
+    padding-left: 8%;
+    padding-right: 8%;
+    font-size: clamp(12px, 2.5vw, 20px);
+    line-height: 170%;
+    color: var(--grayish-blue);
+}
+
+header section#hero div#hero-content button.req-invt {
+    margin: 0 auto;
+    width: 50%;
+    /* padding: 3%; */
+    border: none;
+    border-radius: 22px;
+    background: linear-gradient(to right, var(--color-lime-green), var(--color-bright-cyan));
+    font-weight: var(--weight-bold);
+    cursor: pointer;
+}
+
+header section#hero div#hero-content button.req-invt a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6%;
+    padding-top: 6%;
+    text-decoration: none;
+    color: white;
+}
+
+section#y-choose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28%;
+    padding-bottom: 28%;
+    background-color: #F4F5F7;
+}
+
+section#y-choose header#y-choose-header {
+    height: initial;
+    margin: initial;
+    padding: initial;
+    width: 90%;
+    text-align: center;
+    background-color: initial;
+}
+
+section#y-choose header#y-choose-header h2 {
+    color: var(--color-dark-blue);
+}
+
+section#y-choose header#y-choose-header p {
+    line-height: 170%;
+    color: var(--grayish-blue);
+}
+
+section#y-choose section#y-choose-cards {
+    padding-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 30px;
+
+    /* max-width: 1000px; */
+    background-color: #F4F5F7
+}
+
+section#y-choose section#y-choose-cards article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    width: 90%;
+
+}
+
+section#y-choose section#y-choose-cards article img {
+    text-align: center;
+
+}
+
+section#y-choose section#y-choose-cards article h3 {
+    text-align: center;
+
+}
+
+section#y-choose section#y-choose-cards article p {
+    text-align: center;
+    line-height: 170%;
+    color: var(--grayish-blue);
+}
+
+div#latest-artic-header-title {
+    padding-top: 10%;
+    padding-left: 6%;
+    padding-bottom: 2%;
+}
+
+section#latest-artic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 5%;
+    background-color: #FAFAFA
+}
+
+section#latest-artic header#latest-artic-header {
+    text-align: center;
+}
+
+section#latest-artic article {
+    overflow: hidden;
+    border-radius: 8px;
+    width: 90%;
+    background-color: #FFFFFF;
+}
+
+section#latest-artic article header.latest-artic-header-card {}
+
+section#latest-artic article header.latest-artic-header-card img {
+    width: 100%;
+    margin-bottom: 8%;
+}
+
+section#latest-artic article span {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    color: #A5A4A9;
+    font-size: 12px;
+}
+
+section#latest-artic article h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #575761;
+    font-weight: 500;
+}
+
+section#latest-artic article p {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    font-size: 16px;
+    color: #A5A4A9;
+}
+
+footer {
+    padding-top: 8%;
+    padding-bottom: 8%;
+    color: white;
+    background-color: #2D314E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* footer article {
+    width: 90%;
+    text-align: center;
+} */
+
+footer section#footer-upper {}
+
+footer section#footer-upper article#footer-brand-social-media {}
+
+footer section#footer-upper article#footer-brand-social-media div#brand-title {
+    width: 50%;
+    margin: 0 auto;
+}
+
+div#brand-title img {
+    width: 100%;
+}
+
+#footer-about-contact-blog {
+    gap: 5px;
+}
+
+footer section#footer-upper div#footer-social-media {
+    text-align: center;
+    margin-top: 10%;
+}
+
+#brand-title {
+    text-align: center;
+}
+
+#footer-carrers-support-privacy-policy {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    gap: 5px;
+}
+
+footer article#footer-first section#footer-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer-carrers-support-privacy-policy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer-about-contact-blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer-lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#footer-lower button.req-invt {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    border: none;
+    border-radius: 22px;
+    background: linear-gradient(to right, var(--color-lime-green), var(--color-bright-cyan));
+    font-weight: var(--weight-bold);
+    color: white;
+    cursor: pointer;
+}
+
+section#footer-lower button.req-invt a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6%;
+    padding-top: 6%;
+    text-decoration: none;
+    color: white;
+}
